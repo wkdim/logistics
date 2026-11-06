@@ -499,6 +499,17 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+  /* Let grid columns and form controls shrink on small screens */
+  .grid > * {
+    min-width: 0;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -1562,6 +1573,9 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+.\[overflow-wrap\:anywhere\] {
+  overflow-wrap: anywhere;
 }
 .hover\:bg-amber-100:hover {
   --tw-bg-opacity: 1;

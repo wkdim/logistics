@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swift Logistics - Reliable Delivery Services in Ghana</title>
-    <!-- Tailwind CSS is now built locally into style.css -->
+    <title>Swift Logistics | Fast, Reliable Delivery Across Ghana</title>
+    <meta name="description" content="Swift Logistics delivers parcels, freight and e-commerce fulfilment nationwide in Ghana with same-day options, real-time tracking and 24/7 support.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' font-size='56' font-family='Arial, sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script>
@@ -12,70 +16,109 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body class="smooth-scroll">
+<body data-page="home" class="smooth-scroll">
+
     <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="bg-white/95 backdrop-blur shadow-md fixed w-full top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
                     <i class="fas fa-truck text-blue-600 text-3xl"></i>
-                <a href="#home" class="text-2xl font-bold text-gray-800">Swift Logistics</a>
-                </div>
-                
-                <!-- Desktop Menu -->
+                    <span class="text-2xl font-display font-bold text-gray-800">Swift Logistics</span>
+                </a>
+
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Services</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                    <a href="index.html" data-page="home" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="services.html" data-page="services" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Services</a>
+                    <a href="about.html" data-page="about" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About</a>
+                    <a href="tracking.html" data-page="tracking" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Track Shipment</a>
+                    <a href="contact.html" data-page="contact" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contact</a>
                 </div>
-                
-                <button class="hidden md:block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-                    Get Quote
-                </button>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+
+                <a href="contact.html" class="hidden md:inline-block btn-primary !py-2.5 !px-6 !shadow-none">Get Quote</a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle menu" aria-expanded="false">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
-                <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
-                <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
-                <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
-                <button class="mt-2 w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-                    Get Quote
-                </button>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-1">
+                <a href="index.html" data-page="home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="services.html" data-page="services" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
+                <a href="about.html" data-page="about" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
+                <a href="tracking.html" data-page="tracking" class="block py-2 text-gray-700 hover:text-blue-600">Track Shipment</a>
+                <a href="contact.html" data-page="contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="contact.html" class="mt-2 block w-full text-center btn-primary">Get Quote</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient pt-32 pb-20 px-4">
+    <section class="hero-gradient pt-32 pb-24 px-4 relative overflow-hidden">
         <div class="container mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-white">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Fast & Reliable Logistics Services
+<h1 class="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
+                        Parcels, Freight and Storage Across Ghana
                     </h1>
                     <p class="text-xl mb-8 text-blue-100">
-                        Delivering excellence across Ghana with speed, safety, and professionalism. Your trusted partner for all shipping needs.
+                        Same-day dispatch in Accra, Kumasi and Takoradi. Daily trucks to all 16 regions. Warehousing in Accra and Kumasi for businesses that need stock close to their customers.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
-                            Request Quote
-                        </a>
-                        <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition text-center">
-                            Our Services
-                        </a>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="contact.html" class="btn-primary">Request a Quote</a>
+                        <a href="services.html#calculator" class="btn-secondary btn-ghost-light">Calculate Shipping Cost</a>
+                    </div>
+
+                    <!-- Instant Quick Tracker Input in Hero -->
+                    <div class="bg-white/15 backdrop-blur-md p-3 rounded-xl border border-white/20 max-w-lg mb-8">
+                        <form action="tracking.html" method="GET" class="flex gap-2">
+                            <input type="text" name="code" placeholder="Enter tracking code (e.g. SG-108249)"
+                                class="w-full px-3.5 py-2.5 rounded-lg text-gray-900 text-sm focus:outline-none placeholder-gray-400 bg-white" required>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm whitespace-nowrap transition">
+                                <i class="fas fa-search mr-1.5"></i> Track
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="flex items-center gap-8 text-blue-100 text-sm">
+                        <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-blue-300"></i> Fully insured</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-clock text-blue-300"></i> 24/7 support</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-star text-blue-300"></i> 98% on-time</div>
                     </div>
                 </div>
-                <div class="hidden md:block">
-                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
-                        <i class="fas fa-shipping-fast text-white text-9xl"></i>
+
+                <div class="hidden md:block relative">
+                    <div class="bg-white/10 backdrop-blur-sm p-10 rounded-3xl border border-white/10 relative overflow-hidden">
+                        <svg class="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 300 300" fill="none" preserveAspectRatio="none">
+                            <path d="M20 220 C 80 260, 120 60, 280 90" stroke="white" stroke-width="2" stroke-dasharray="6 8" stroke-linecap="round"/>
+                            <circle cx="20" cy="220" r="6" fill="white"/>
+                            <circle cx="280" cy="90" r="6" fill="white"/>
+                        </svg>
+                        <div class="relative flex items-center justify-center py-10">
+                            <div class="w-40 h-40 bg-white/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-truck-fast text-white text-6xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -left-6 -top-6 bg-white rounded-xl shadow-xl p-4">
+                        <div class="flex items-center gap-3">
+                            <div class="icon-tile bg-green-100 text-green-600"><i class="fas fa-check"></i></div>
+                            <div>
+                                <p class="font-bold text-gray-800 leading-none">1,204</p>
+                                <p class="text-xs text-gray-500">Delivered today</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -right-4 -bottom-6 bg-white rounded-xl shadow-xl p-4 w-56">
+                        <div class="flex justify-between text-xs text-gray-500 mb-2">
+                            <span>Parcel #SG-108249</span>
+                            <span class="text-blue-600 font-semibold">In transit</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width:70%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,199 +126,171 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
+    <section class="py-16 bg-gray-50 px-4">
+        <div class="container mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-md text-center">
-                    <i class="fas fa-clock text-blue-600 text-5xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">24/7 Service</h3>
-                    <p class="text-gray-600">Round-the-clock support and delivery options for your convenience</p>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center card-hover reveal">
+                    <div class="icon-tile bg-blue-100 text-blue-600 mx-auto mb-4"><i class="fas fa-clock text-2xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Operations</h3>
+                    <p class="text-gray-600">Our Accra hub sorts parcels through the night, and someone always answers the dispatch line.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md text-center">
-                    <i class="fas fa-shield-alt text-blue-600 text-5xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Secure Delivery</h3>
-                    <p class="text-gray-600">Your packages are insured and handled with maximum care</p>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center card-hover reveal">
+                    <div class="icon-tile bg-blue-100 text-blue-600 mx-auto mb-4"><i class="fas fa-shield-alt text-2xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Secure Transit</h3>
+                    <p class="text-gray-600">Every parcel gets a waybill number and basic insurance. You get an SMS at pickup and at delivery.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md text-center">
-                    <i class="fas fa-map-marked-alt text-blue-600 text-5xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Nationwide Coverage</h3>
-                    <p class="text-gray-600">We deliver to every corner of Ghana, no matter how remote</p>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center card-hover reveal">
+                    <div class="icon-tile bg-blue-100 text-blue-600 mx-auto mb-4"><i class="fas fa-map-marked-alt text-2xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">All 16 Regions</h3>
+                    <p class="text-gray-600">Trucks leave Accra every morning for Kumasi, Tamale, Ho, Takoradi, Bolgatanga and Sefwi Wiawso.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Preview -->
     <section id="services" class="py-20 px-4">
         <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
-                <p class="text-xl text-gray-600">Comprehensive logistics solutions tailored to your needs</p>
+            <div class="text-center mb-16 reveal">
+                <span class="section-badge mb-4">Services</span>
+                <h2 class="text-4xl font-display font-bold text-gray-800 mb-4">What We Do</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">One parcel or a full truckload, we pick up, store and deliver.</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal border border-slate-100">
                     <div class="bg-blue-600 p-6 text-center">
-                        <i class="fas fa-box text-white text-6xl"></i>
+                        <i class="fas fa-box text-white text-5xl"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Parcel Delivery</h3>
-                        <p class="text-gray-600 mb-4">Fast and secure delivery of packages and parcels across Ghana. Same-day and next-day options available.</p>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Door-to-door service</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Real-time tracking</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Insurance coverage</li>
-                        </ul>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Parcel Delivery</h3>
+                        <p class="text-gray-600 mb-3 text-sm">Fast, secure delivery across Ghana with same-day and next-day options.</p>
+                        <a href="services.html#parcel" class="text-blue-600 font-semibold text-sm">Learn more <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
-
-                <!-- Service Card 2 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal border border-slate-100">
                     <div class="bg-blue-600 p-6 text-center">
-                        <i class="fas fa-warehouse text-white text-6xl"></i>
+                        <i class="fas fa-warehouse text-white text-5xl"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Warehousing</h3>
-                        <p class="text-gray-600 mb-4">Secure storage solutions with inventory management and distribution services.</p>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Climate-controlled facilities</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>24/7 security</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Flexible storage plans</li>
-                        </ul>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Warehousing</h3>
+                        <p class="text-gray-600 mb-3 text-sm">Storage in Accra and Kumasi, with stock counts you can check online.</p>
+                        <a href="services.html#warehousing" class="text-blue-600 font-semibold text-sm">Learn more <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
-
-                <!-- Service Card 3 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal border border-slate-100">
                     <div class="bg-blue-600 p-6 text-center">
-                        <i class="fas fa-truck-loading text-white text-6xl"></i>
+                        <i class="fas fa-truck-loading text-white text-5xl"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Freight Services</h3>
-                        <p class="text-gray-600 mb-4">Heavy cargo and bulk shipment solutions for businesses of all sizes.</p>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Road freight</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Cargo insurance</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Custom solutions</li>
-                        </ul>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Freight Services</h3>
+                        <p class="text-gray-600 mb-3 text-sm">Full and part truckloads for traders, factories and farms.</p>
+                        <a href="services.html#freight" class="text-blue-600 font-semibold text-sm">Learn more <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Service Card 4 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="bg-blue-600 p-6 text-center">
-                        <i class="fas fa-store text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800">E-commerce Logistics</h3>
-                        <p class="text-gray-600 mb-4">End-to-end fulfillment services for online businesses and retailers.</p>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Order fulfillment</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Returns management</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Last-mile delivery</li>
-                        </ul>
-                    </div>
+            <div class="text-center mt-10 reveal">
+                <a href="services.html" class="btn-secondary text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-gray-50 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="section-badge mb-4">How It Works</span>
+                <h2 class="text-4xl font-display font-bold text-gray-800 mb-4">How a Delivery Works</h2>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <div class="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-gray-200" style="margin: 0 12.5%;"></div>
+                <div class="text-center relative reveal">
+                    <div class="timeline-dot mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-gray-800 mb-2">Book Online</h3>
+                    <p class="text-gray-600 text-sm">Get a price with our calculator or call us for a quote.</p>
                 </div>
-
-                <!-- Service Card 5 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="bg-blue-600 p-6 text-center">
-                        <i class="fas fa-motorcycle text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Express Delivery</h3>
-                        <p class="text-gray-600 mb-4">Ultra-fast delivery for urgent shipments within Accra and major cities.</p>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>2-hour delivery</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Same-day guarantee</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Priority handling</li>
-                        </ul>
-                    </div>
+                <div class="text-center relative reveal">
+                    <div class="timeline-dot mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-gray-800 mb-2">We Collect</h3>
+                    <p class="text-gray-600 text-sm">A rider or van picks up from your shop, office or home.</p>
                 </div>
-
-                <!-- Service Card 6 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="bg-blue-600 p-6 text-center">
-                        <i class="fas fa-globe text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3 text-gray-800">International Shipping</h3>
-                        <p class="text-gray-600 mb-4">Global shipping solutions with customs clearance assistance.</p>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Worldwide network</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Customs support</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>Documentation help</li>
-                        </ul>
-                    </div>
+                <div class="text-center relative reveal">
+                    <div class="timeline-dot mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-gray-800 mb-2">In Transit</h3>
+                    <p class="text-gray-600 text-sm">Follow your waybill online or by SMS as it moves between hubs.</p>
+                </div>
+                <div class="text-center relative reveal">
+                    <div class="timeline-dot mx-auto mb-4">4</div>
+                    <h3 class="font-bold text-gray-800 mb-2">Delivered</h3>
+                    <p class="text-gray-600 text-sm">The receiver signs on the rider's phone and you get a confirmation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50 px-4">
+    <!-- Stats -->
+    <section class="py-16 px-4 bg-navy-900 text-white">
         <div class="container mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">About Swift Logistics</h2>
-                    <p class="text-gray-600 text-lg mb-4">
-                        Founded in 2020, Swift Logistics has rapidly become one of Ghana's most trusted delivery and logistics companies. We pride ourselves on reliability, speed, and customer satisfaction.
-                    </p>
-                    <p class="text-gray-600 text-lg mb-6">
-                        With a fleet of modern vehicles and a team of dedicated professionals, we handle thousands of deliveries every month, ensuring your packages reach their destination safely and on time.
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">5000+</div>
-                            <div class="text-gray-600">Deliveries/Month</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
-                            <div class="text-gray-600">On-Time Rate</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
-                            <div class="text-gray-600">Team Members</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-                            <div class="text-gray-600">Support</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="reveal">
+                    <div class="text-4xl font-display font-bold text-blue-400 mb-1">5,000+</div>
+                    <div class="text-slate-400">Deliveries / Month</div>
+                </div>
+                <div class="reveal">
+                    <div class="text-4xl font-display font-bold text-blue-400 mb-1">98%</div>
+                    <div class="text-slate-400">On-Time Rate</div>
+                </div>
+                <div class="reveal">
+                    <div class="text-4xl font-display font-bold text-blue-400 mb-1">16</div>
+                    <div class="text-slate-400">Regions Covered</div>
+                </div>
+                <div class="reveal">
+                    <div class="text-4xl font-display font-bold text-blue-400 mb-1">24/7</div>
+                    <div class="text-slate-400">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="section-badge mb-4">Testimonials</span>
+                <h2 class="text-4xl font-display font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md reveal border border-slate-100">
+                    <i class="fas fa-quote-left text-blue-200 text-3xl mb-4"></i>
+                    <p class="text-gray-600 mb-6">"We send about 40 orders a day from Osu. Most reach Accra customers the same afternoon, and the COD money comes in the next morning."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">AK</div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Ama Kusi</p>
+                            <p class="text-gray-500 text-xs">Founder, Kusi Boutique</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-xl">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Why Choose Us?</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-star text-yellow-500 text-2xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Proven Track Record</h4>
-                                <p class="text-gray-600">Years of experience delivering excellence</p>
-                            </div>
+                <div class="bg-white p-8 rounded-xl shadow-md reveal border border-slate-100">
+                    <i class="fas fa-quote-left text-blue-200 text-3xl mb-4"></i>
+                    <p class="text-gray-600 mb-6">"We keep our stock at their Kumasi warehouse now. Orders from the north reach our customers two days faster than before."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">KO</div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Kwame Owusu</p>
+                            <p class="text-gray-500 text-xs">Ops Manager, Owusu Traders</p>
                         </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-dollar-sign text-green-500 text-2xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Competitive Pricing</h4>
-                                <p class="text-gray-600">Best rates without compromising quality</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-headset text-blue-500 text-2xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Customer Support</h4>
-                                <p class="text-gray-600">Always available to assist you</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-leaf text-green-600 text-2xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Eco-Friendly</h4>
-                                <p class="text-gray-600">Committed to sustainable practices</p>
-                            </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md reveal border border-slate-100">
+                    <i class="fas fa-quote-left text-blue-200 text-3xl mb-4"></i>
+                    <p class="text-gray-600 mb-6">"Their trucks take our yams and plantain from Techiman to Accra every week. Fair rates, and the dispatcher picks up when I call."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">EA</div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Esi Aidoo</p>
+                            <p class="text-gray-500 text-xs">Director, Aidoo Farms</p>
                         </div>
                     </div>
                 </div>
@@ -283,158 +298,70 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4">
+    <!-- CTA Banner -->
+    <section class="py-16 px-4">
         <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
-                <p class="text-xl text-gray-600">Ready to ship with us? Contact us today for a quote</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <form id="contactForm" class="space-y-6">
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Full Name</label>
-                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="John Mensah">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Email Address</label>
-                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="john@example.com">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
-                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="0241234567">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Service Needed</label>
-                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
-                                <option>Parcel Delivery</option>
-                                <option>Freight Services</option>
-                                <option>Warehousing</option>
-                                <option>Express Delivery</option>
-                                <option>E-commerce Logistics</option>
-                                <option>International Shipping</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Tell us about your shipping needs..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-                
-                <!-- Contact Info -->
-                <div class="space-y-8">
-                    <div class="bg-blue-50 p-6 rounded-xl">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-blue-600 text-3xl mr-4"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800 text-lg mb-2">Office Location</h3>
-                                <p class="text-gray-600">123 Independence Avenue<br>Accra, Ghana</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-blue-50 p-6 rounded-xl">
-                        <div class="flex items-start">
-                            <i class="fas fa-phone text-blue-600 text-3xl mr-4"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800 text-lg mb-2">Phone Numbers</h3>
-                                <p class="text-gray-600">+233 24 123 4567<br>+233 55 987 6543</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-blue-50 p-6 rounded-xl">
-                        <div class="flex items-start">
-                            <i class="fas fa-envelope text-blue-600 text-3xl mr-4"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800 text-lg mb-2">Email Address</h3>
-                                <p class="text-gray-600">info@swiftlogistics.com<br>support@swiftlogistics.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-blue-50 p-6 rounded-xl">
-                        <div class="flex items-start">
-                            <i class="fas fa-clock text-blue-600 text-3xl mr-4"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800 text-lg mb-2">Working Hours</h3>
-                                <p class="text-gray-600">Monday - Friday: 7:00 AM - 8:00 PM<br>Saturday: 8:00 AM - 6:00 PM<br>Sunday: 9:00 AM - 4:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="bg-blue-400 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="bg-pink-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-700 transition">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="hero-gradient rounded-3xl px-8 py-14 text-center text-white reveal">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Need Something Moved?</h2>
+                <p class="text-blue-100 text-lg mb-8 max-w-xl mx-auto">Tell us what, where and when. We will send you a price, usually within the hour.</p>
+                <a href="contact.html" class="btn-primary bg-white text-blue-600 hover:bg-gray-100">Request Your Quote</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-4">
+    <footer class="bg-navy-900 text-white py-14 px-4">
         <div class="container mx-auto">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid md:grid-cols-4 gap-10 mb-10">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-truck text-blue-500 text-2xl"></i>
-                        <span class="text-xl font-bold">Swift Logistics</span>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-truck text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-display font-bold">Swift Logistics</span>
+                    </a>
+                    <p class="text-slate-400 mb-4">Parcel delivery, freight and warehousing across all 16 regions of Ghana. Head office at Ridge, Accra.</p>
+                    <div class="flex space-x-3">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    <p class="text-gray-400">Your trusted partner for reliable and fast delivery services across Ghana.</p>
                 </div>
-                
                 <div>
                     <h4 class="font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
-                        <li><a href="#services" class="hover:text-blue-500">Services</a></li>
-                        <li><a href="#about" class="hover:text-blue-500">About Us</a></li>
-                        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="tracking.html" class="hover:text-blue-400">Track Shipment</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h4 class="font-bold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-blue-500">Parcel Delivery</a></li>
-                        <li><a href="#" class="hover:text-blue-500">Freight Services</a></li>
-                        <li><a href="#" class="hover:text-blue-500">Warehousing</a></li>
-                        <li><a href="#" class="hover:text-blue-500">Express Delivery</a></li>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="services.html#parcel" class="hover:text-blue-400">Parcel Delivery</a></li>
+                        <li><a href="services.html#freight" class="hover:text-blue-400">Freight Services</a></li>
+                        <li><a href="services.html#warehousing" class="hover:text-blue-400">Warehousing</a></li>
+                        <li><a href="services.html#express" class="hover:text-blue-400">Express Delivery</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h4 class="font-bold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">Subscribe for updates and offers</p>
-                    <div class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-gray-900">
-                        <button class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700">
+                    <p class="text-slate-400 mb-4">Monthly updates on new routes and holiday cut-off dates.</p>
+                    <form id="newsletterForm" class="flex" novalidate>
+                        <input type="email" required placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-gray-900 focus:outline-none">
+                        <button type="submit" class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700" aria-label="Subscribe">
                             <i class="fas fa-paper-plane"></i>
                         </button>
-                    </div>
+                    </form>
+                    <p id="newsletterMsg" class="text-green-400 text-sm mt-2 hidden">Thanks for subscribing!</p>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Swift Logistics. All rights reserved. | Designed with ❤️ in Ghana</p>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm">
+                <p>&copy; <span id="year"></span> Swift Logistics. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <span>Registered in Ghana</span>
+                </div>
             </div>
         </div>
     </footer>

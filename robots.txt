@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://logistics-snowy.vercel.app/sitemap.xml
